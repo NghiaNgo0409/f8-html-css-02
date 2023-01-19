@@ -20,10 +20,17 @@ body {
     margin-right: auto;
 }
 
+a {
+    text-decoration: none;
+}
+
 .btn {
-    width: 118px;
-    height: 50px;
+    display: inline-block;
+    min-width: 118px;
+    padding: 0 8px;
+    line-height: 50px;
     background: #171100;
+    text-align: center;
     border-radius: 24.5px;
 }
 
@@ -32,34 +39,42 @@ body {
     background-color: #fffcf4;
     padding-top: 36px;
 }
+
+.header.fixed {
+    position: sticky;
+    top: -28px;
+}
+
 .navbar {
     display: flex;
+    align-items: center;
 }
 
 .navbar ul {
     display: flex;
-    gap: 42px;
-    margin-left: 512px;
+    margin-left: auto;
 }
 
 .navbar ul a {
+    position: relative;
+    padding: 8px 21px;
     font-weight: 400;
     font-size: 1.6rem;
     color: #5f5b53;
-    text-decoration: none;
 }
 
-.navbar ul li:first-child a {
-    font-weight: 600;
+.navbar ul a:hover,
+.navbar ul li.active a {
+    /* font-weight: 600; */
+    text-shadow: 1px 0 0 currentColor;
     color: #171100;
-    position: relative;
 }
 
-.navbar ul li:first-child a::after {
+.navbar ul li.active a::after {
     content: "";
     position: absolute;
-    left: 1px;
-    bottom: -2px;
+    left: 22px;
+    bottom: 6px;
     width: 12px;
     height: 2px;
     background: #171100;
@@ -67,11 +82,11 @@ body {
 }
 
 .navbar .action {
-    margin-left: 70px;
+    margin-left: 54px;
 }
 
 .navbar .action .btn {
-    padding: 11px 41px;
+    min-width: 144px;
     font-weight: 600;
     font-size: 1.6rem;
     color: #ffffff;
