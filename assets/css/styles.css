@@ -534,11 +534,11 @@ a {
 
 .feature-top .info {
     padding-left: 130px;
+    margin: auto 0;
 }
 
 .feature-top .title,
 .feature-bot .title {
-    margin-top: 58px;
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 3.8rem;
@@ -572,8 +572,8 @@ a {
     display: flex;
 }
 
-.feature-bot .title {
-    margin-top: 71px;
+.feature-bot .info {
+    margin: auto 0;
 }
 
 .feature-bot .image {
